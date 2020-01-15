@@ -2,6 +2,7 @@ import React from 'react';
 import logo from './logo.svg';
 import './App.css';
 import {Choice} from './singleChoice';
+import {Score} from './score';
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
         </a>
       </header>
       <Choice />
+      <Score />
     </div>
   );
 }
