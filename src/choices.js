@@ -62,32 +62,139 @@ const envChoices = [
     },
     {
         ID: 2,
-        name: 'Travel',
-        subtitle: 'testing here',
-        description: 'more text here',
+        name: 'Transport',
+        subtitle: 'Cars and planes are a significant and growing contributor to carbon emissions',
+        description: 'In 2017, transport accounted for 27% of carbon emissions in the EU, 28% higher than 1990. International aviation was responsible for the largest percentage increase in that period - at 129% - but road transport emissions also increased by 23%.',
         value: 0,
-        evidence: 'more text here too',
+        evidence: [
+            {
+                Title: "Greenhouse gas emissions from transport in Europe",
+                Url: "https://www.eea.europa.eu/data-and-maps/indicators/transport-emissions-of-greenhouse-gases/transport-emissions-of-greenhouse-gases-12"
+            }
+        ],
         children: [
             {
                 ID: 2.1,
-                name: 'Committing to one flight this year',
-                subtitle: 'testing here',
+                name: 'Committing to two flights this year',
+                subtitle: 'Ditch the city breaks or go by train',
                 description: 'more text here',
-                value: 7,
+                value: 10,
                 evidence: 'more text here too',
                 selected: false
+            },
+            {
+                ID: 2.2,
+                name: 'Making your regular local trips via foot, bicycle or public transport',
+                subtitle: "Ditching the car for daily commute and school run.",
+                description: 'more text here',
+                value: 10,
+                evidence: 'more text here too',
+                selected: false
+            },
+            {
+                ID: 2.3,
+                name: 'Going electric',
+                subtitle: 'Replacing your petrol or diesel car with an electric vehicle',
+                description: 'more text here',
+                value: 15,
+                evidence: 'more text here too',
+                selected: false
+            },
+        ]
+    },
+    {
+        ID: 3,
+        name: 'Domestic/utilities',
+        subtitle: "Rescuing the climate begins at home.",
+        description: "A quarter of the world's CO2 emissions are associated with electricity and heat production. Some methods of energy generation, such as burning coal or natural gas, directly produce greenhouse gases. It makes sense to opt for renewable forms of energy generation such as wind power or solar energy where possible, and reduce the amount of energy you use.",
+        value: 0,
+        evidence: [
+            {
+                Title: "Global Greenhouse Gas Emissions Data",
+                Url: "https://www.epa.gov/ghgemissions/global-greenhouse-gas-emissions-data"
             }
+        ],
+        children: [
+            {
+                ID: 3.1,
+                name: 'Switching to an eco energy supplier',
+                subtitle: 'Find a supplier that promises 100% renewable',
+                description: "Find the most environmentally-friendly energy suppliers here: https://energysavingtrust.org.uk/home-energy-efficiency/switching-utilities/buying-green-electricity",
+                value: 10,
+                evidence: 'more text here too',
+                selected: false 
+            },
+            {
+                ID: 3.2,
+                name: 'Improving your insulation',
+                subtitle: 'One of the most effective ways to reduce your domestic carbon footprint.',
+                description: "A third of heat escapes through the walls of hour homes. You can reduce your emissions by 20% by installing cavity wall insulation. Loft insulation is also very cost-effective. To find out more about your insulation options, you can pay about £50 for an accredited energy performance assessor - find one <a href='https://www.epcregister.com/searchAssessor.html'>here</a>",
+                value: 10,
+                evidence: [
+                    {
+                        Title: "Saving Energy At Home: Friends of the Earth",
+                        Url: "https://friendsoftheearth.uk/climate-change/saving-energy-home-heating-and-insulation"
+                    }
+                ],
+                selected: false 
+            },
+            
         ]
     },
     // {
-    //     // Household.. heating, electricity etc
-    // },
-    // {
     //     // Shopping choices
     // },
-    // {
-    //     // Political campaigning - joining a group, contributing money, direct action, petition, email/tweet politician or business
-    // },
+    {
+        ID: 4,
+        name: 'Political action',
+        subtitle: "This is too big to tackle alone.",
+        description: "'We don’t expect individuals to take the lead when it comes to other social and economic challenges, such as unemployment', says climate academic Anders Levermann. '...The same is true of the climate crisis. What we need is citizens to make adamant demands of their politicians and institutions for more urgent action.'",
+        value: 0,
+        evidence: [
+            {
+                Title: "Individuals can’t solve the climate crisis. Governments need to step up.",
+                Url: "https://www.theguardian.com/commentisfree/2019/jul/10/individuals-climate-crisis-government-planet-priority"
+            }
+        ],
+        children: [
+            {
+                ID: 4.1,
+                name: 'Join a national campaign group',
+                subtitle: 'Support groups fighting climate change and stay up to date with campaigns',
+                description: "Three groups you could support include Greenpeace, Friends of the Earth and Extinction Rebellion. Any subscription fees will help the groups with their campaigns and you'll also get to find out about how to get more involved with campaigns.",
+                value: 10,
+                evidence: 'more text here too',
+                selected: false 
+            },
+            {
+                ID: 4.2,
+                name: 'Get involved in a local campaign group',
+                subtitle: 'Build action from the ground up',
+                description: "Greenpeace, Friends of the Earth and Extinction Rebellion all have local groups you could get involved in, depending how radical you feel. Local groups inspire others to take climate action and pressure local councils to adopt climate action plans.",
+                value: 10,
+                evidence: 'more text here too',
+                selected: false 
+            },
+            {
+                ID: 4.3,
+                name: 'Take action online',
+                subtitle: "We can all do this, it's easy!",
+                description: "Signing online petitions and writing to politicians and large companies is something you can do with little effort and is one way to start your environmental campaigning journey. Friends of the Earch lists <a href='https://friendsoftheearth.uk/latest/actions'>lots of actions</a> you can take, from writing to local councillors about tree planting to calling on the government to take urgent climate action.",
+                value: 10,
+                evidence: 'more text here too',
+                selected: false 
+            },
+            {
+                ID: 4.4,
+                name: 'Take to the streets',
+                subtitle: "Show governments and big business how much you care",
+                description: "Extinction Rebellion have made the headlines when it comes to radical direct action on climate change. You could also join the school climate strikes and other local and national events to come. No-one can deny the strength of feeling inherent in mass protest - get involved to start making a real difference.",
+                value: 10,
+                evidence: 'more text here too',
+                selected: false 
+            },
+        ]
+    }
 
 ];
 

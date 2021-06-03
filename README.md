@@ -1,3 +1,5 @@
+A React app to allow users to keep a record of their contributions towards tackling climate change - in early development
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts

@@ -78,32 +78,42 @@ export class App extends React.Component {
         
         return (
             // map through the choices array
-            <div>
-            {envChoices.map((choice) =>
-                <div className="choice" key={choice.ID}>
-                    <h3>{choice.name}</h3>
-                    <h5 className="subtitle">{choice.subtitle}</h5>
-                    <div className="description">{choice.description}</div>
-                    {
-                        choice.children.map((child) => 
-                            <div key={child.ID} id={child.ID}>
-                                <h4>{child.name}</h4>
-                                <h5>{child.subtitle}</h5>
-                                <Checkbox 
-                                    score={child.value} 
-                                    // selected={!this.state.selected}   
-                                    onClick={(event) => {
-                                        // on click pass the value of the option and its checked status                                     
-                                        this.handleClick(child.value, event.target.checked);    
-                                    }} 
-                                />
-                                {this.defaultChecked}
+            <div className="container-fluid">
+                <div className="row">
+                    <div className="col">
+                        <h1>Climate action calculator</h1>
+                        <div className="row">
+                            <div className="intro col-md-8">
+                                Introduction here - stuff about this being last year to make a real change but lots we can be doing. Often we wonder how well we are doing and whether there is more we can do.
                             </div>
-                        )           
-                    }
+                        </div>
+                        {envChoices.map((choice) =>
+                            <div className="choice" key={choice.ID}>
+                                <h3>{choice.name}</h3>
+                                <h5 className="subtitle">{choice.subtitle}</h5>
+                                <div className="description">{choice.description}</div>
+                                {
+                                    choice.children.map((child) => 
+                                        <div key={child.ID} id={child.ID}>
+                                            <h4>{child.name}</h4>
+                                            <h5>{child.subtitle}</h5>
+                                            <Checkbox 
+                                                score={child.value} 
+                                                // selected={!this.state.selected}   
+                                                onClick={(event) => {
+                                                    // on click pass the value of the option and its checked status                                     
+                                                    this.handleClick(child.value, event.target.checked);    
+                                                }} 
+                                            />
+                                            {this.defaultChecked}
+                                        </div>
+                                    )           
+                                }
+                            </div>
+                        )}
+                        Total: {this.state.total}
+                    </div> 
                 </div>
-            )}
-            Total: {this.state.total}
             </div>
         )
     }
